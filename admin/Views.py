@@ -22,7 +22,7 @@ class HomeView(AdminIndexView):
 
         return self.render('home_admin.html', report={
             'users': users[0],
-        }, last_products=last_products)
+        })
 
 
     def is_accessible(self):

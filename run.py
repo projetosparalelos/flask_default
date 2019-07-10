@@ -4,7 +4,8 @@ from config import app_config, app_active
 
 config = app_config[app_active]
 config.APP = create_app(app_active)
+app = config.APP
 
 if __name__ == '__main__':
-    config.APP.run(host=config.IP_HOST, port=config.PORT_HOST)
+    app.run(host=config.IP_HOST, port=config.PORT_HOST)
     reload(sys)
